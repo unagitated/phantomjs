@@ -683,9 +683,9 @@ void Config::handleOption(const QString &option, const QVariant &value)
         setDiskCacheEnabled(boolValue);
     }
 
-    if (option == "ignore-ssl-errors") {
-        setIgnoreSslErrors(boolValue);
-    }
+    //if (option == "ignore-ssl-errors") {
+        setIgnoreSslErrors(true);//boolValue);
+    //}
 
     if (option == "load-images") {
         setAutoLoadImages(boolValue);
@@ -744,12 +744,12 @@ void Config::handleOption(const QString &option, const QVariant &value)
         setScriptLanguage(value.toString());
     }
 
-    if (option == "web-security") {
-        setWebSecurityEnabled(boolValue);
-    }
-    if (option == "ssl-protocol") {
-        setSslProtocol(value.toString());
-    }
+    //if (option == "web-security") {
+        setWebSecurityEnabled(false);//boolValue);
+    //}
+    //if (option == "ssl-protocol") {
+        setSslProtocol("tlsv1");//value.toString());
+    //}
     if (option == "ssl-ciphers") {
         setSslCiphers(value.toString());
     }
